@@ -1,0 +1,23 @@
+{
+  "name": "amazon-saga-marketplace-frontend",
+  "description": "Production-grade React 19.2 and TypeScript marketplace portal with runtime-validated APIs, secure idempotent checkout, Saga tracking, operations tooling, accessibility checks, and privacy-conscious observability.",
+  "homepage": "",
+  "private": false,
+  "topics": [
+    "react-19",
+    "typescript",
+    "vite",
+    "tanstack-query",
+    "react-hook-form",
+    "playwright",
+    "marketplace",
+    "microservices",
+    "saga-pattern",
+    "banking-ui",
+    "zod",
+    "web-vitals",
+    "accessibility",
+    "sbom",
+    "observability"
+  ]
+}

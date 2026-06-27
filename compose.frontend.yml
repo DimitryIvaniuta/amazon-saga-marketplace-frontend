@@ -1,0 +1,27 @@
+services:
+  marketplace-frontend:
+    build:
+      context: .
+    image: amazon-saga-marketplace-frontend:local
+    environment:
+      API_UPSTREAM: ${API_UPSTREAM:-http://host.docker.internal:8080}
+      APP_NAME: ${APP_NAME:-Atlas Marketplace}
+      API_BASE_URL: ""
+      ORDER_POLLING_MS: ${ORDER_POLLING_MS:-2000}
+      APP_RELEASE: ${APP_RELEASE:-local}
+      TELEMETRY_ENDPOINT: ${TELEMETRY_ENDPOINT:-}
+      TELEMETRY_SAMPLE_RATE: ${TELEMETRY_SAMPLE_RATE:-0}
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - "4173:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /etc/nginx/conf.d
+      - /var/cache/nginx
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: unless-stopped

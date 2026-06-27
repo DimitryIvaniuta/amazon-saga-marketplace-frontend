@@ -8,7 +8,7 @@ RUN npm ci
 COPY . .
 RUN npm run check
 
-FROM nginxinc/nginx-unprivileged:1.30.3-alpine
+FROM nginxinc/nginx-unprivileged:1.31.2-alpine
 LABEL org.opencontainers.image.title="Atlas Marketplace Frontend" \
       org.opencontainers.image.description="React marketplace portal for the Saga commerce platform" \
       org.opencontainers.image.source="https://github.com/dimitryivaniuta/amazon-saga-marketplace-frontend"
